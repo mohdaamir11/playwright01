@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonChrome" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonFirefox" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -122,12 +127,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonFirefox" class="method navigator-link" hash-for-method="Search">Search</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonEDGE" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonFirefox" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -137,7 +137,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonFirefox" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.playwright.testcases.LoginSearchTestonEDGE" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -155,44 +155,6 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.playwright.testcases.LoginSearchTestonEDGE</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Search">
-                  </a> <!-- Search -->
-                  <span class="method-name">Search</span>
-                  <div class="stack-trace">com.microsoft.playwright.PlaywrightException: Object doesn&apos;t exist: response@61c34afdee091d750202ca4a81343ef5
-	at com.microsoft.playwright.impl.Connection.getExistingObject(Connection.java:190)
-	at com.microsoft.playwright.impl.BrowserContextImpl.handleEvent(BrowserContextImpl.java:735)
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:290)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:209)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:129)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
-	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
-	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
-	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
-	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:210)
-	at com.microsoft.playwright.Locator.fill(Locator.java:2908)
-	at com.playwright.testcases.LoginSearchTestonEDGE.Search(LoginSearchTestonEDGE.java:55)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 10 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
               <span class="class-name">com.playwright.testcases.LoginSearchTestonChrome</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -205,11 +167,11 @@
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\progress.js:87:26)
-    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\frames.js:1039:23)
-    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\frameDispatcher.js:164:30)
-    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\dispatcher.js:84:40)
-    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\dispatcher.js:351:39)
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
 }
 Call log:
 - waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
@@ -235,11 +197,11 @@ Caused by: com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\progress.js:87:26)
-    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\frames.js:1039:23)
-    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\frameDispatcher.js:164:30)
-    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\dispatcher.js:84:40)
-    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-12444968829656750977\package\lib\server\dispatchers\dispatcher.js:351:39)
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
 }
 Call log:
 - waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
@@ -254,6 +216,149 @@ Call log:
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.playwright.testcases.LoginSearchTestonEDGE</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Search">
+                  </a> <!-- Search -->
+                  <span class="method-name">Search</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:129)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:210)
+	at com.microsoft.playwright.Locator.fill(Locator.java:2908)
+	at com.playwright.testcases.LoginSearchTestonEDGE.Search(LoginSearchTestonEDGE.java:55)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:252)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:209)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 25 more
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.playwright.testcases.LoginSearchTestonFirefox</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Search">
+                  </a> <!-- Search -->
+                  <span class="method-name">Search</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:129)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:210)
+	at com.microsoft.playwright.Locator.fill(Locator.java:2908)
+	at com.playwright.testcases.LoginSearchTestonFirefox.Search(LoginSearchTestonFirefox.java:50)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\progress.js:87:26)
+    at Frame.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\frames.js:1039:23)
+    at FrameDispatcher.fill (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\frameDispatcher.js:164:30)
+    at FrameDispatcher._handleCommand (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:84:40)
+    at DispatcherConnection.dispatch (C:\Users\91995\AppData\Local\Temp\playwright-java-11292345027923975193\package\lib\server\dispatchers\dispatcher.js:351:39)
+}
+Call log:
+- waiting for getByPlaceholder(&quot;Search Amazon.in&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:252)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:209)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 25 more
+... Removed 10 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.playwright.testcases.LoginSearchTestonChrome</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -273,28 +378,6 @@ Call log:
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.playwright.testcases.LoginSearchTestonFirefox</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Search">
-                  </a> <!-- Search -->
-                  <span class="method-name">Search</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.playwright.testcases.LoginSearchTestonChrome</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -363,33 +446,33 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Search')
-data.setCell(0, 2, 'com.playwright.testcases.LoginSearchTestonChrome')
-data.setCell(0, 3, 30012);
+data.setCell(0, 2, 'com.playwright.testcases.LoginSearchTestonEDGE')
+data.setCell(0, 3, 30019);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Search')
-data.setCell(1, 2, 'com.playwright.testcases.LoginSearchTestonFirefox')
-data.setCell(1, 3, 3315);
+data.setCell(1, 2, 'com.playwright.testcases.LoginSearchTestonChrome')
+data.setCell(1, 3, 30018);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login')
-data.setCell(2, 2, 'com.playwright.testcases.LoginSearchTestonEDGE')
-data.setCell(2, 3, 1540);
+data.setCell(2, 1, 'Search')
+data.setCell(2, 2, 'com.playwright.testcases.LoginSearchTestonFirefox')
+data.setCell(2, 3, 30013);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'login')
-data.setCell(3, 2, 'com.playwright.testcases.LoginSearchTestonChrome')
-data.setCell(3, 3, 1509);
+data.setCell(3, 2, 'com.playwright.testcases.LoginSearchTestonFirefox')
+data.setCell(3, 3, 1264);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'login')
-data.setCell(4, 2, 'com.playwright.testcases.LoginSearchTestonFirefox')
-data.setCell(4, 3, 1161);
+data.setCell(4, 2, 'com.playwright.testcases.LoginSearchTestonEDGE')
+data.setCell(4, 3, 972);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Search')
-data.setCell(5, 2, 'com.playwright.testcases.LoginSearchTestonEDGE')
-data.setCell(5, 3, 161);
+data.setCell(5, 1, 'login')
+data.setCell(5, 2, 'com.playwright.testcases.LoginSearchTestonChrome')
+data.setCell(5, 3, 936);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -425,51 +508,38 @@ return data;
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonEDGE</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">11053 ms</span>
+                <span class="method-start">12751 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonFirefox</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">13918 ms</span>
+                <span class="method-start">15443 ms</span>
               </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonEDGE</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">17770 ms</span>
+                <span class="method-start">19309 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonChrome</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">login</span>
-                <span class="method-start">17770 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonFirefox</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">login</span>
-                <span class="method-start">17770 ms</span>
+                <span class="method-start">19309 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonEDGE</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">19309 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Search</span>
-                <span class="method-start">18936 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonFirefox</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">Search</span>
-                <span class="method-start">19099 ms</span>
+                <span class="method-start">20339 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -478,25 +548,37 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Search</span>
-                <span class="method-start">19281 ms</span>
+                <span class="method-start">20340 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonFirefox</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Search</span>
+                <span class="method-start">20578 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonChrome</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">49300 ms</span>
+                <span class="method-start">50599 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonEDGE</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">49378 ms</span>
+                <span class="method-start">50684 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.playwright.testcases.LoginSearchTestonFirefox</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">49464 ms</span>
+                <span class="method-start">50769 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
