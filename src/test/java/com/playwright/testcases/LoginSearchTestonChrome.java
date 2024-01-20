@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
@@ -25,36 +26,40 @@ public class LoginSearchTestonChrome {
 	{
 	 playwright = Playwright.create();
 	 LaunchOptions lp = new LaunchOptions();
-		lp.setChannel("chrome");
+		lp.setChannel("chrome"); //chrome
 		lp.setHeadless(true);	
 		Browser browser= playwright.chromium().launch(lp);
 		BrowserContext brcx1 = browser.newContext();		 
 		p1 = brcx1.newPage();
-		p1.navigate("https://www.amazon.in");
-		p1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Hello, sign in Account & Lists")).click();
+		p1.navigate("https://automationexercise.com/login");
 		System.out.println("CHROME - INSIDE BEFORE TEST SETUP");
 	}
 	
 	@Test (priority=1)
 	public void login()
 	{
-		
-		p1.getByLabel("Email or mobile phone number").click();
-		p1.getByLabel("Email or mobile phone number").fill("aamirisprofessional@gmail.com");
-		p1.getByLabel("Continue").click();
-		p1.getByLabel("Password").fill("Onegod@111");
-		p1.getByLabel("Sign in").click();
-		System.out.println("CHROME - INSIDE LOGIN TEST");
+		System.out.println("CHROME - INSIDE LOGIN TEST ");
+		 p1.navigate("https://automationexercise.com/login");
+		 p1.locator("form").filter(new Locator.FilterOptions().setHasText("Login")).getByPlaceholder("Email Address").click();
+		 p1.locator("form").filter(new Locator.FilterOptions().setHasText("Login")).getByPlaceholder("Email Address").fill("Onegod@111");
+		 p1.getByPlaceholder("Password").click();
+		 p1.getByPlaceholder("Password").fill("Onegod@111");
+		 p1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login")).click();
+		 assertThat(p1.locator("b")).containsText("Mohd Aamir");
 	}
 	
 	@Test (priority=2)
 	public void Search()
 	{
 		System.out.println("CHROME - INSIDE SEARCH TEST");
+
+		p1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Products")).click();
+		p1.getByPlaceholder("Search Product").click();
+		p1.getByPlaceholder("Search Product").fill("GRAPHIC DESIGN MEN T SHIRT");
+		p1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).click();
+		 assertThat(p1.locator("body")).containsText("GRAPHIC DESIGN MEN T SHIRT - BLUE");  // Assertion after search
+	      
 		
-	    p1.getByPlaceholder("Search Amazon.in").fill("nike shoes");
-	    p1.getByPlaceholder("Search Amazon.in").press("Enter");
-	    assertThat(p1.locator("#search")).containsText("Nike");  // Assertion after search
 	   
 	}
 	
@@ -65,5 +70,8 @@ public class LoginSearchTestonChrome {
 		p1.context().browser().close();
 		
 	}
+	
+	
+	
 	
 }

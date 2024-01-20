@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.playwright.testcases.LoginSearchTestonChrome">
-        <methods>
-          <include name="Search"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.playwright.testcases.LoginSearchTestonChrome -->
       <class name="com.playwright.testcases.LoginSearchTestonEDGE">
         <methods>
           <include name="Search"/>
@@ -17,13 +10,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.playwright.testcases.LoginSearchTestonEDGE -->
-      <class name="com.playwright.testcases.LoginSearchTestonFirefox">
-        <methods>
-          <include name="setup"/>
-          <include name="Search"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.playwright.testcases.LoginSearchTestonFirefox -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
