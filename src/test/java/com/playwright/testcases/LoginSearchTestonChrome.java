@@ -27,9 +27,9 @@ public class LoginSearchTestonChrome {
 	 playwright = Playwright.create();
 	 LaunchOptions lp = new LaunchOptions();
 		lp.setChannel("chrome"); //chrome
-		lp.setHeadless(true);	
+		lp.setHeadless(false);	
 		Browser browser= playwright.chromium().launch(lp);
-		BrowserContext brcx1 = browser.newContext();		 
+		BrowserContext brcx1 = browser.newContext(new Browser.NewContextOptions().setViewportSize(1920,1080));		 
 		p1 = brcx1.newPage();
 		p1.navigate("https://automationexercise.com/login");
 		System.out.println("CHROME - INSIDE BEFORE TEST SETUP");
@@ -53,7 +53,8 @@ public class LoginSearchTestonChrome {
 	{
 		System.out.println("CHROME - INSIDE SEARCH TEST");
 
-		p1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Products")).click();
+		p1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Products")).click(); //need to add
+		p1.waitForTimeout(5000);  
 		p1.getByPlaceholder("Search Product").click();
 		p1.getByPlaceholder("Search Product").fill("GRAPHIC DESIGN MEN T SHIRT");
 		p1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).click();

@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-20T22:15:44 IST" name="Default suite" finished-at="2024-01-20T22:15:55 IST" duration-ms="10968">
+  <suite started-at="2024-01-22T00:45:00 IST" name="Suite" finished-at="2024-01-22T00:46:01 IST" duration-ms="60197">
     <groups>
     </groups>
-    <test started-at="2024-01-20T22:15:44 IST" name="Default test" finished-at="2024-01-20T22:15:55 IST" duration-ms="10968">
-      <class name="com.playwright.testcases.LoginSearchTestonEDGE">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.playwright.testcases.LoginSearchTestonEDGE@7164ca4c]" started-at="2024-01-20T22:15:44 IST" name="setup" finished-at="2024-01-20T22:15:50 IST" duration-ms="6013" status="PASS">
+    <test started-at="2024-01-22T00:45:00 IST" name="Test" finished-at="2024-01-22T00:46:01 IST" duration-ms="60197">
+      <class name="com.playwright.testcases.LoginSearchTestonChrome">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.playwright.testcases.LoginSearchTestonChrome@70f02c32]" started-at="2024-01-22T00:45:00 IST" name="setup" finished-at="2024-01-22T00:45:10 IST" duration-ms="9537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:com.playwright.testcases.LoginSearchTestonEDGE@7164ca4c]" started-at="2024-01-20T22:15:50 IST" name="login" finished-at="2024-01-20T22:15:52 IST" duration-ms="2126" status="PASS">
+        <test-method signature="login()[pri:1, instance:com.playwright.testcases.LoginSearchTestonChrome@70f02c32]" started-at="2024-01-22T00:45:39 IST" name="login" finished-at="2024-01-22T00:45:42 IST" duration-ms="2983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="Search()[pri:2, instance:com.playwright.testcases.LoginSearchTestonEDGE@7164ca4c]" started-at="2024-01-20T22:15:52 IST" name="Search" finished-at="2024-01-20T22:15:55 IST" duration-ms="2676" status="PASS">
+        <test-method signature="Search()[pri:2, instance:com.playwright.testcases.LoginSearchTestonChrome@70f02c32]" started-at="2024-01-22T00:45:42 IST" name="Search" finished-at="2024-01-22T00:45:50 IST" duration-ms="7671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.playwright.testcases.LoginSearchTestonEDGE@7164ca4c]" started-at="2024-01-20T22:15:55 IST" name="teardown" finished-at="2024-01-20T22:15:55 IST" duration-ms="60" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.playwright.testcases.LoginSearchTestonChrome@70f02c32]" started-at="2024-01-22T00:45:59 IST" name="teardown" finished-at="2024-01-22T00:45:59 IST" duration-ms="303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.playwright.testcases.LoginSearchTestonChrome -->
+      <class name="com.playwright.testcases.LoginSearchTestonEDGE">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.playwright.testcases.LoginSearchTestonEDGE@59a008ba]" started-at="2024-01-22T00:45:10 IST" name="setup" finished-at="2024-01-22T00:45:14 IST" duration-ms="4416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:1, instance:com.playwright.testcases.LoginSearchTestonEDGE@59a008ba]" started-at="2024-01-22T00:45:21 IST" name="login" finished-at="2024-01-22T00:45:24 IST" duration-ms="2847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="Search()[pri:2, instance:com.playwright.testcases.LoginSearchTestonEDGE@59a008ba]" started-at="2024-01-22T00:45:24 IST" name="Search" finished-at="2024-01-22T00:45:39 IST" duration-ms="14882" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.playwright.testcases.LoginSearchTestonEDGE@59a008ba]" started-at="2024-01-22T00:45:59 IST" name="teardown" finished-at="2024-01-22T00:46:00 IST" duration-ms="507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.playwright.testcases.LoginSearchTestonEDGE -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.playwright.testcases.LoginSearchTestonFirefox">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.playwright.testcases.LoginSearchTestonFirefox@62010f5c]" started-at="2024-01-22T00:45:14 IST" name="setup" finished-at="2024-01-22T00:45:21 IST" duration-ms="6957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:1, instance:com.playwright.testcases.LoginSearchTestonFirefox@62010f5c]" started-at="2024-01-22T00:45:50 IST" name="login" finished-at="2024-01-22T00:45:53 IST" duration-ms="2667" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="Search()[pri:2, instance:com.playwright.testcases.LoginSearchTestonFirefox@62010f5c]" started-at="2024-01-22T00:45:53 IST" name="Search" finished-at="2024-01-22T00:45:59 IST" duration-ms="6322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.playwright.testcases.LoginSearchTestonFirefox@62010f5c]" started-at="2024-01-22T00:46:00 IST" name="teardown" finished-at="2024-01-22T00:46:01 IST" duration-ms="845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.playwright.testcases.LoginSearchTestonFirefox -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

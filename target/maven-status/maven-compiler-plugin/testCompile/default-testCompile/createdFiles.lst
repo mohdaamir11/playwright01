@@ -1,0 +1,3 @@
+com\playwright\testcases\LoginSearchTestonEDGE.class
+com\playwright\testcases\LoginSearchTestonFirefox.class
+com\playwright\testcases\LoginSearchTestonChrome.class

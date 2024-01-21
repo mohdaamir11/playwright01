@@ -8,10 +8,10 @@ import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.options.AriaRole;
 
 public class LoginSearchTestonFirefox {
@@ -23,8 +23,8 @@ public class LoginSearchTestonFirefox {
 	public void setup()
 	{
 	 playwright = Playwright.create();
-		Browser browser= playwright.firefox().launch();  // firefox
-		BrowserContext brcx1 = browser.newContext();		 
+		Browser browser= playwright.firefox().launch(new BrowserType.LaunchOptions(). setHeadless(false));  // firefox
+		BrowserContext brcx1 = browser.newContext(new Browser.NewContextOptions().setViewportSize(1920,1080));		 
 		p1 = brcx1.newPage();
 		p1.navigate("https://automationexercise.com/login");
 		System.out.println("FF - INSIDE BEFORE TEST SETUP");
@@ -37,7 +37,7 @@ public class LoginSearchTestonFirefox {
 		 p1.navigate("https://automationexercise.com/login");
 		 p1.locator("form").filter(new Locator.FilterOptions().setHasText("Login")).getByPlaceholder("Email Address").click();
 		 p1.locator("form").filter(new Locator.FilterOptions().setHasText("Login")).getByPlaceholder("Email Address").fill("Onegod@111");
-		 p1.getByPlaceholder("Password").click();
+		 p1.getByPlaceholder("Password").click(); 
 		 p1.getByPlaceholder("Password").fill("Onegod@111");
 		 p1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login")).click();
 		 assertThat(p1.locator("b")).containsText("Mohd Aamir");
@@ -50,6 +50,7 @@ public class LoginSearchTestonFirefox {
 		System.out.println("FF - INSIDE SEARCH TEST");
 
 		p1.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName(" Products")).click();
+		p1.waitForTimeout(5000);  
 		p1.getByPlaceholder("Search Product").click();
 		p1.getByPlaceholder("Search Product").fill("GRAPHIC DESIGN MEN T SHIRT");
 		p1.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).click();
